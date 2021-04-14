@@ -1,0 +1,27 @@
+services:
+  app:
+    build: .
+    ports:
+      - 8080:8080
+    command: bash -c "node main"
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: 15021995
+    volumes:
+      - ./docker/data-mongo:/data/db:rw
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: 15021995

@@ -1,0 +1,33 @@
+### incluir categoria
+POST http://localhost:8080/api/v1/Categorias
+content-type: application/json
+
+{
+	"categoria": "A",
+	"descricao": "Categoria A",
+	"eventos": [{
+			"nome": "VITORIA",
+			"operacao": "+",
+			"valor": 30
+		},
+		{
+			"nome": "VITORIA_LIDER",
+			"operacao": "+",
+			"valor": 50
+		},
+		{
+			"nome": "DERROTA",
+			"operacao": "+",
+			"valor": 0
+		}
+	]
+}
+
+### consultar todas as categorias
+GET http://localhost:8080/api/v1/Categorias
+
+### consultar por categoria
+GET http://localhost:8080/api/v1/Categorias/A
+
+### atribuir jogdor na categoria
+POST http://localhost:8080/api/v1/Categorias/A/Jogadores/606e51499e626b23abc1672c
