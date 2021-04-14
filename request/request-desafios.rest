@@ -1,0 +1,42 @@
+POST http://localhost:8080/api/v1/desafios
+content-type: application/json
+
+{
+    "dataHoraDesafio": "2021-04-10 09:00",
+    "solicitante":  {
+        "_id": "60691afd16ab8b1448d0c064",
+        "telefoneCelular": "12 999999495",
+        "email": "carol@gmail.com",
+        "nome": "Carol Silva",
+        "createdAt": "2021-04-04T01:48:45.937Z",
+        "updatedAt": "2021-04-04T01:48:45.937Z",
+        "__v": 0
+    },
+    "jogadores": [
+        {
+            "_id": "60691afd16ab8b1448d0c064",
+            "telefoneCelular": "12 999999495",
+            "email": "carol@gmail.com",
+            "nome": "Carol Silva",
+            "createdAt": "2021-04-04T01:48:45.937Z",
+            "updatedAt": "2021-04-04T01:48:45.937Z",
+            "__v": 0
+        },
+        {
+            "_id": "606e51499e626b23abc1672c",
+            "telefoneCelular": "12 999999495",
+            "email": "felipe@gmail.com",
+            "nome": "Felipe",
+            "createdAt": "2021-04-08T00:41:45.132Z",
+            "updatedAt": "2021-04-08T00:41:45.132Z",
+            "__v": 0
+        }
+    ]
+}
+
+### Retornar todos os Desafios
+GET http://localhost:8080/api/v1/desafios
+
+
+### Retornar todos os Desafios
+GET http://localhost:8080/api/v1/desafios/60691afd16ab8b1448d0c064

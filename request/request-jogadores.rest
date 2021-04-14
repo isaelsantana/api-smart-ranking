@@ -1,0 +1,28 @@
+
+### incluir jogadores
+POST http://localhost:8080/api/v1/Jogadores
+content-type: application/json
+
+{
+    "telefoneCelular": "12 999999495",
+    "email": "felipe@gmail.com"    ,
+    "nome": "Felipe"
+}
+
+###
+PUT http://localhost:8080/api/v1/Jogadores/60690525dacc85057c29366c
+content-type: application/json
+
+{
+    "telefoneCelular": "12 999999998",    
+    "nome": "Isael Santana"
+}
+
+### consultar todos os jogadores
+GET http://localhost:8080/api/v1/Jogadores
+
+### consultar por Id
+GET http://localhost:8080/api/v1/Jogadores/60691afd16ab8b1448d0c064
+
+### deletar jogador por Id
+DELETE http://localhost:8080/api/v1/Jogadores/60691ac3c772411424a23d7c
